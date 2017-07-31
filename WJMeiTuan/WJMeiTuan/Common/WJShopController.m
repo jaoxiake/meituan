@@ -30,10 +30,17 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor blueColor];
-    //导航条颜色
-    self.bar.barTintColor = [UIColor redColor];
     //导航条标题
-    self.item.title = @"冰雹";
+    self.item.title = @"香河肉饼";
+    //导航条标题颜色
+    self.bar.titleTextAttributes = @{NSForegroundColorAttributeName :[UIColor colorWithWhite:0.4 alpha:0]};
+    //导航条背景图完全透明
+    self.bar.bgImageView.alpha = 0;
+    
+    //分享按钮
+    UIBarButtonItem *rightShareBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_share"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.item.rightBarButtonItem = rightShareBtn;
+    self.bar.tintColor = [UIColor whiteColor];
     
     
 }
@@ -69,7 +76,7 @@
             
             make.height.offset(KShopHeaderViewMinHeight);
             
-        }else if (p.y + headerViewH >= KShopHeaderViewMaxHeight){
+        }else if (p.y + headerViewH >KShopHeaderViewMaxHeight){
         
             make.height.offset(KShopHeaderViewMaxHeight);
         }else{
@@ -80,16 +87,24 @@
         
     }];
     
-    //180 1   64 0
-//    CGFloat alpha = [self alphaWithConsult:headerViewH andConsult1:180 andResult1:1 andConsult2:64 andResult2:0];
+    //180 0   64 1
+//    CGFloat alpha = [self alphaWithConsult:headerViewH andConsult1:180 andResult1:0 andConsult2:64 andResult2:1];
     
-//    CGFloat alpha = [self alphaWithConsult:headerViewH andValue1:WJValueMake(180, 1) andValue2:WJValueMake(64, 0)];
+//    CGFloat alpha = [self alphaWithConsult:headerViewH andValue1:WJValueMake(180, 0) andValue2:WJValueMake(64, 1)];
 
-    CGFloat alpha = [@(headerViewH) alphaWithValue1:WJValueMake(180, 1) andValue2:WJValueMake(64, 0)];
+    //导航条透明效果
+    CGFloat alpha = [@(headerViewH) alphaWithValue1:WJValueMake(180, 0) andValue2:WJValueMake(64, 1)];
     
     self.bar.bgImageView.alpha = alpha;
     
+    //导航条标题颜色
+    self.bar.titleTextAttributes = @{NSForegroundColorAttributeName :[UIColor colorWithWhite:0.4 alpha:alpha]};
 
+    CGFloat white = [@(headerViewH) alphaWithValue1:WJValueMake(180, 1) andValue2:WJValueMake(64, 0.4)];
+    
+    //分享按钮颜色
+    self.bar.tintColor = [UIColor colorWithWhite:white alpha:1];
+    
     //恢复到初始值
     [pan setTranslation:CGPointZero inView:pan.view];
 
@@ -105,7 +120,7 @@
 //    return a * headerViewH + b;
 //}
 
-
+//跳转到食品界面
 //-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    
 //    WJFoodDetailController *foodVc = [[WJFoodDetailController alloc] init];
@@ -114,19 +129,6 @@
 //    
 //}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
