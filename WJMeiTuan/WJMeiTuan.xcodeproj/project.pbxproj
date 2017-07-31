@@ -18,6 +18,7 @@
 		9B5C984A1F2E4308009CE4CF /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C983E1F2E4308009CE4CF /* View+MASAdditions.m */; };
 		9B5C984B1F2E4308009CE4CF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C98411F2E4308009CE4CF /* ViewController+MASAdditions.m */; };
 		9B5C984F1F2E4792009CE4CF /* WJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C984E1F2E4792009CE4CF /* WJNavigationController.m */; };
+		9B6C215A1F2F59D800B36B38 /* NSObject+LinearFormula.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21591F2F59D800B36B38 /* NSObject+LinearFormula.m */; };
 		9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5E81F2EB81500D759BE /* WJBaseViewController.m */; };
 		9BA2F5EC1F2EF9F400D759BE /* WJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5EB1F2EF9F400D759BE /* WJNavigationBar.m */; };
 		9BAC446D1F2E387100CF9E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC446C1F2E387100CF9E09 /* main.m */; };
@@ -81,6 +82,9 @@
 		9B5C98411F2E4308009CE4CF /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		9B5C984D1F2E4792009CE4CF /* WJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNavigationController.h; sourceTree = "<group>"; };
 		9B5C984E1F2E4792009CE4CF /* WJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJNavigationController.m; sourceTree = "<group>"; };
+		9B6C21581F2F59D800B36B38 /* NSObject+LinearFormula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LinearFormula.h"; sourceTree = "<group>"; };
+		9B6C21591F2F59D800B36B38 /* NSObject+LinearFormula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LinearFormula.m"; sourceTree = "<group>"; };
+		9B6C215B1F2F59EC00B36B38 /* Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Addition.h; sourceTree = "<group>"; };
 		9BA2F5E71F2EB81500D759BE /* WJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJBaseViewController.h; sourceTree = "<group>"; };
 		9BA2F5E81F2EB81500D759BE /* WJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJBaseViewController.m; sourceTree = "<group>"; };
 		9BA2F5EA1F2EF9F400D759BE /* WJNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNavigationBar.h; sourceTree = "<group>"; };
@@ -226,9 +230,9 @@
 		9BAC446A1F2E387100CF9E09 /* WJMeiTuan */ = {
 			isa = PBXGroup;
 			children = (
+				9BAC44831F2E389100CF9E09 /* Common */,
 				9BAC44841F2E389100CF9E09 /* Libs */,
 				9BAC44821F2E389100CF9E09 /* Classes */,
-				9BAC44831F2E389100CF9E09 /* Common */,
 				9BAC44851F2E389100CF9E09 /* Other */,
 				9BAC446B1F2E387100CF9E09 /* Supporting Files */,
 				9BAC44E21F2E3BE300CF9E09 /* WJWaiMai-PrefixHeader.pch */,
@@ -259,6 +263,9 @@
 		9BAC44831F2E389100CF9E09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C21581F2F59D800B36B38 /* NSObject+LinearFormula.h */,
+				9B6C21591F2F59D800B36B38 /* NSObject+LinearFormula.m */,
+				9B6C215B1F2F59EC00B36B38 /* Addition.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -472,6 +479,7 @@
 				9BAC44C11F2E39D700CF9E09 /* AFURLRequestSerialization.m in Sources */,
 				9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */,
 				9B5C98471F2E4308009CE4CF /* MASViewConstraint.m in Sources */,
+				9B6C215A1F2F59D800B36B38 /* NSObject+LinearFormula.m in Sources */,
 				9BAC44C71F2E39D700CF9E09 /* SDImageCache.m in Sources */,
 				9BAC44BF1F2E39D700CF9E09 /* AFNetworkReachabilityManager.m in Sources */,
 				9BAC44D31F2E39D700CF9E09 /* UIImageView+HighlightedWebCache.m in Sources */,

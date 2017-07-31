@@ -79,7 +79,13 @@
         }
         
     }];
-    CGFloat alpha = (1 / -116.0) * headerViewH - ((1 / -116.0) * 180.0);
+    
+    //180 1   64 0
+//    CGFloat alpha = [self alphaWithConsult:headerViewH andConsult1:180 andResult1:1 andConsult2:64 andResult2:0];
+    
+//    CGFloat alpha = [self alphaWithConsult:headerViewH andValue1:WJValueMake(180, 1) andValue2:WJValueMake(64, 0)];
+
+    CGFloat alpha = [@(headerViewH) alphaWithValue1:WJValueMake(180, 1) andValue2:WJValueMake(64, 0)];
     
     self.bar.bgImageView.alpha = alpha;
     
@@ -88,6 +94,16 @@
     [pan setTranslation:CGPointZero inView:pan.view];
 
 }
+
+//- (CGFloat)alphaWithConsult:(CGFloat)headerViewH andConsult1:(CGFloat)consult1 andResult1:(CGFloat)result1 andConsult2:(CGFloat)consult2 andResult2:(CGFloat)result2{
+//
+//    //result1 = a*consult1 + b
+//    //result2 = a*consult2 + b
+//    CGFloat a = (result1 - result2) / (consult1 - consult2);
+//    CGFloat b = result1 - a * consult1;
+//    
+//    return a * headerViewH + b;
+//}
 
 
 //-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

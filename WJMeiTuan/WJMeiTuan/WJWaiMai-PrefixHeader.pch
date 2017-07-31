@@ -6,6 +6,7 @@
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 #import "Masonry.h"
+#import "Addition.h"
 
 #endif
 
