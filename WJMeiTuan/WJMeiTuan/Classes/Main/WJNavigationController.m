@@ -37,4 +37,8 @@
     [self popViewControllerAnimated:YES];
 }
 
+//让子控制器设置状态样式
+-(UIViewController *)childViewControllerForStatusBarStyle{
+    return self.topViewController;
+}
 @end

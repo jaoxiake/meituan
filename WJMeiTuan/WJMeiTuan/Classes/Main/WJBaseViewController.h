@@ -14,4 +14,6 @@
 @property (nonatomic, strong, readonly) WJNavigationBar *bar;
 // item
 @property (nonatomic, strong, readonly) UINavigationItem *item;
+// 状态栏样式
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
 @end

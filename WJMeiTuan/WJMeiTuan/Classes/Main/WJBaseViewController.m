@@ -15,6 +15,18 @@
 
 @implementation WJBaseViewController
 
+
+-(void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle{
+    _statusBarStyle = statusBarStyle;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+//设置statusBar样式
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return self.statusBarStyle;
+}
+
+
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

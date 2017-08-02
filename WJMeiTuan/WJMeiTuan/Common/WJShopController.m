@@ -105,6 +105,13 @@
     //分享按钮颜色
     self.bar.tintColor = [UIColor colorWithWhite:white alpha:1];
     
+    //状态栏
+    if (headerViewH == KShopHeaderViewMaxHeight && self.statusBarStyle != UIStatusBarStyleLightContent) {
+        self.statusBarStyle = UIStatusBarStyleLightContent;
+    }else if(headerViewH == KShopHeaderViewMinHeight && self.statusBarStyle != UIStatusBarStyleDefault){
+        self.statusBarStyle = UIStatusBarStyleDefault;
+    }
+    
     //恢复到初始值
     [pan setTranslation:CGPointZero inView:pan.view];
 
