@@ -60,6 +60,47 @@
     }];
     
     _tagView = tagView;
+    
+    // TODO:添加标签中按钮
+    UIButton *order = [self makeTagBtnWithTitle:@"点菜"];
+    //默认加粗
+    order.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    
+    [self makeTagBtnWithTitle:@"评价"];
+    [self makeTagBtnWithTitle:@"商家"];
+    
+    [tagView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.offset(0);
+    }];
+    
+    [tagView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
+    
+    // TODO:添加小黄条
+    UIView *yellowView = [[UIView alloc] init];
+    yellowView.backgroundColor = [UIColor primaryYellowColor];
+    [tagView addSubview:yellowView];
+    
+    [yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(50);
+        make.height.offset(4);
+        make.bottom.offset(0);
+        make.centerX.equalTo(order.mas_centerX).offset(0);
+    }];
+    
+}
+
+#pragma mark - 创建标签中按钮
+- (UIButton *)makeTagBtnWithTitle:(NSString *)title{
+
+    UIButton *btn = [[UIButton alloc]init];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    
+    //添加到标签栏中
+    [_tagView addSubview:btn];
+    
+    return btn;
 }
 
 #pragma mark - 创建滚动视图
