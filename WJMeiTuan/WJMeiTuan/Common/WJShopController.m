@@ -18,18 +18,67 @@
 //headerView
 @property(nonatomic,weak)UIView *headerView;
 
+//tagView
+@property(nonatomic,weak)UIView *tagView;
+
 @end
 
 @implementation WJShopController
 
 - (void)viewDidLoad {
     
-    //添加头部视图
-    [self setupUI];
+    // TODO:创建头部视图
+    [self settingHeaderView];
 
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor blueColor];
+    
+    // TODO:创建默认视图
+    [self settingNormal];
+    
+    // TODO:创建标签视图
+    [self settingShopTagView];
+    
+    // TODO:创建滚动视图
+    [self settingShopScrollView];
+
+    
+}
+
+#pragma mark - 创建标签视图
+- (void)settingShopTagView{
+
+    UIView *tagView = [[UIView alloc] init];
+    tagView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:tagView];
+    
+    [tagView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.offset(0);
+        make.top.equalTo(_headerView.mas_bottom).offset(0);
+        make.height.offset(44);
+    }];
+    
+    _tagView = tagView;
+}
+
+#pragma mark - 创建滚动视图
+- (void)settingShopScrollView{
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:scrollView];
+    
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.offset(0);
+        make.top.equalTo(_tagView.mas_bottom).offset(0);
+    }];
+}
+
+
+#pragma mark - 创建默认视图
+- (void)settingNormal{
+    
     //导航条标题
     self.item.title = @"香河肉饼";
     //导航条标题颜色
@@ -41,11 +90,11 @@
     UIBarButtonItem *rightShareBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_share"] style:UIBarButtonItemStylePlain target:nil action:nil];
     self.item.rightBarButtonItem = rightShareBtn;
     self.bar.tintColor = [UIColor whiteColor];
-    
-    
+
 }
 
-- (void)setupUI{
+#pragma mark - 创建头部视图
+- (void)settingHeaderView{
 
     //头部视图
     UIView *headerView = [[UIView alloc]init];
@@ -63,7 +112,7 @@
     _headerView = headerView;
 }
 
-//平移手势
+#pragma mark - 平移手势
 - (void)panGesture:(UIPanGestureRecognizer *)pan {
     //获取平移的距离
     CGPoint p = [pan translationInView:pan.view];
