@@ -23,6 +23,10 @@
 		9B6C21641F31A0AD00B36B38 /* WJShopCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21631F31A0AD00B36B38 /* WJShopCommentController.m */; };
 		9B6C21671F31A0BC00B36B38 /* WJShopInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21661F31A0BC00B36B38 /* WJShopInfoController.m */; };
 		9B6C216A1F31A0CF00B36B38 /* WJShopOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21691F31A0CF00B36B38 /* WJShopOrderController.m */; };
+		9B6C217C1F322B9600B36B38 /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C217B1F322B9600B36B38 /* food.json */; };
+		9B6C21821F322C6400B36B38 /* WJShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21811F322C6400B36B38 /* WJShopModel.m */; };
+		9B6C21851F322E8500B36B38 /* WJShopHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21841F322E8500B36B38 /* WJShopHeaderView.m */; };
+		9B6C21881F3239FA00B36B38 /* UILabel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21871F3239FA00B36B38 /* UILabel+Addition.m */; };
 		9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5E81F2EB81500D759BE /* WJBaseViewController.m */; };
 		9BA2F5EC1F2EF9F400D759BE /* WJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5EB1F2EF9F400D759BE /* WJNavigationBar.m */; };
 		9BAC446D1F2E387100CF9E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC446C1F2E387100CF9E09 /* main.m */; };
@@ -97,6 +101,13 @@
 		9B6C21661F31A0BC00B36B38 /* WJShopInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopInfoController.m; sourceTree = "<group>"; };
 		9B6C21681F31A0CF00B36B38 /* WJShopOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJShopOrderController.h; sourceTree = "<group>"; };
 		9B6C21691F31A0CF00B36B38 /* WJShopOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopOrderController.m; sourceTree = "<group>"; };
+		9B6C217B1F322B9600B36B38 /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = food.json; path = "../../../../Desktop/就业班/UI进阶/01-UI进阶-第10天(美团外卖02)/02-其它资源/01-素材/food.json"; sourceTree = "<group>"; };
+		9B6C21801F322C6400B36B38 /* WJShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJShopModel.h; path = WJMeiTuan/Classes/WJShopModel.h; sourceTree = SOURCE_ROOT; };
+		9B6C21811F322C6400B36B38 /* WJShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJShopModel.m; path = WJMeiTuan/Classes/WJShopModel.m; sourceTree = SOURCE_ROOT; };
+		9B6C21831F322E8500B36B38 /* WJShopHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJShopHeaderView.h; path = WJMeiTuan/Classes/WJShopHeaderView.h; sourceTree = SOURCE_ROOT; };
+		9B6C21841F322E8500B36B38 /* WJShopHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJShopHeaderView.m; path = WJMeiTuan/Classes/WJShopHeaderView.m; sourceTree = SOURCE_ROOT; };
+		9B6C21861F3239FA00B36B38 /* UILabel+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Addition.h"; sourceTree = "<group>"; };
+		9B6C21871F3239FA00B36B38 /* UILabel+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Addition.m"; sourceTree = "<group>"; };
 		9BA2F5E71F2EB81500D759BE /* WJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJBaseViewController.h; sourceTree = "<group>"; };
 		9BA2F5E81F2EB81500D759BE /* WJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJBaseViewController.m; sourceTree = "<group>"; };
 		9BA2F5EA1F2EF9F400D759BE /* WJNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNavigationBar.h; sourceTree = "<group>"; };
@@ -253,6 +264,33 @@
 			path = ../Common/Order;
 			sourceTree = "<group>";
 		};
+		9B6C217D1F322BC700B36B38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C21801F322C6400B36B38 /* WJShopModel.h */,
+				9B6C21811F322C6400B36B38 /* WJShopModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B6C217E1F322BD600B36B38 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BAC44DC1F2E3AEF00CF9E09 /* WJShopController.h */,
+				9BAC44DD1F2E3AEF00CF9E09 /* WJShopController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9B6C217F1F322BDF00B36B38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C21831F322E8500B36B38 /* WJShopHeaderView.h */,
+				9B6C21841F322E8500B36B38 /* WJShopHeaderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9BAC445F1F2E387100CF9E09 = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +346,8 @@
 		9BAC44831F2E389100CF9E09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C21861F3239FA00B36B38 /* UILabel+Addition.h */,
+				9B6C21871F3239FA00B36B38 /* UILabel+Addition.m */,
 				9B6C21581F2F59D800B36B38 /* NSObject+LinearFormula.h */,
 				9B6C21591F2F59D800B36B38 /* NSObject+LinearFormula.m */,
 				9B6C215B1F2F59EC00B36B38 /* Addition.h */,
@@ -330,6 +370,7 @@
 		9BAC44851F2E389100CF9E09 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C217B1F322B9600B36B38 /* food.json */,
 				9BAC446E1F2E387100CF9E09 /* AppDelegate.h */,
 				9BAC446F1F2E387100CF9E09 /* AppDelegate.m */,
 				9BAC44771F2E387100CF9E09 /* Assets.xcassets */,
@@ -418,8 +459,9 @@
 		9BAC44D81F2E3A8800CF9E09 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				9BAC44DC1F2E3AEF00CF9E09 /* WJShopController.h */,
-				9BAC44DD1F2E3AEF00CF9E09 /* WJShopController.m */,
+				9B6C217F1F322BDF00B36B38 /* View */,
+				9B6C217E1F322BD600B36B38 /* Controller */,
+				9B6C217D1F322BC700B36B38 /* Model */,
 			);
 			name = Shop;
 			path = ../Common;
@@ -484,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6C217C1F322B9600B36B38 /* food.json in Resources */,
 				9BAC447B1F2E387100CF9E09 /* LaunchScreen.storyboard in Resources */,
 				9BAC44781F2E387100CF9E09 /* Assets.xcassets in Resources */,
 			);
@@ -524,6 +567,7 @@
 				9B5C98461F2E4308009CE4CF /* MASViewAttribute.m in Sources */,
 				9B5C98431F2E4308009CE4CF /* MASConstraint.m in Sources */,
 				9BAC44D51F2E39D700CF9E09 /* UIView+WebCache.m in Sources */,
+				9B6C21881F3239FA00B36B38 /* UILabel+Addition.m in Sources */,
 				9B6C21671F31A0BC00B36B38 /* WJShopInfoController.m in Sources */,
 				9BAC44C11F2E39D700CF9E09 /* AFURLRequestSerialization.m in Sources */,
 				9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */,
@@ -532,10 +576,12 @@
 				9BAC44C71F2E39D700CF9E09 /* SDImageCache.m in Sources */,
 				9BAC44BF1F2E39D700CF9E09 /* AFNetworkReachabilityManager.m in Sources */,
 				9BAC44D31F2E39D700CF9E09 /* UIImageView+HighlightedWebCache.m in Sources */,
+				9B6C21821F322C6400B36B38 /* WJShopModel.m in Sources */,
 				9BAC44C21F2E39D700CF9E09 /* AFURLResponseSerialization.m in Sources */,
 				9BAC446D1F2E387100CF9E09 /* main.m in Sources */,
 				9BAC44CF1F2E39D700CF9E09 /* UIButton+WebCache.m in Sources */,
 				9BA2F5EC1F2EF9F400D759BE /* WJNavigationBar.m in Sources */,
+				9B6C21851F322E8500B36B38 /* WJShopHeaderView.m in Sources */,
 				9B5C98481F2E4308009CE4CF /* NSArray+MASAdditions.m in Sources */,
 				9BAC44C41F2E39D700CF9E09 /* MKAnnotationView+WebCache.m in Sources */,
 				9B6C216A1F31A0CF00B36B38 /* WJShopOrderController.m in Sources */,

@@ -12,6 +12,8 @@
 #import "WJShopCommentController.h"
 #import "WJShopInfoController.h"
 #import "WJShopOrderController.h"
+#import "WJShopHeaderView.h"
+#import "WJShopModel.h"
 
 // 头部视图的最大和最小高度
 #define KShopHeaderViewMaxHeight   180
@@ -31,11 +33,18 @@
 //滚动视图
 @property(nonatomic,weak)UIScrollView *scrollView;
 
+//保存所有poi_info模型数据
+@property(nonatomic,strong)WJShopModel *poi_infoModel;
+
+
 @end
 
 @implementation WJShopController
 
 - (void)viewDidLoad {
+    
+    // TODO:加载数据
+    [self loadFoodData];
     
     // TODO:创建头部视图
     [self settingHeaderView];
@@ -247,8 +256,8 @@
 - (void)settingHeaderView{
 
     //头部视图
-    UIView *headerView = [[UIView alloc]init];
-    headerView.backgroundColor = [UIColor greenColor];
+    WJShopHeaderView *headerView = [[WJShopHeaderView alloc]init];
+    headerView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:headerView];
     
     [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -260,6 +269,8 @@
     [self.view addGestureRecognizer:pan];
     
     _headerView = headerView;
+    headerView.poi_infoModel = _poi_infoModel;
+    
 }
 
 #pragma mark - 平移手势
@@ -335,6 +346,23 @@
 //    
 //}
 
-
+#pragma mark - 加载food.json数据
+- (void)loadFoodData{
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"food.json" withExtension:nil];
+    
+    //加载JSON数据
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    
+    //解析JSON转化为字典数组
+    NSDictionary *JSONdict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    NSDictionary *poi_infoDict = JSONdict[@"data"][@"poi_info"];
+    
+    WJShopModel *poi_infoModel = [WJShopModel shopPOI_infoWithDict:poi_infoDict];
+    
+    _poi_infoModel = poi_infoModel;
+    
+}
 
 @end
