@@ -17,13 +17,19 @@
 #define KShopHeaderViewMaxHeight   180
 #define KShopHeaderViewMinHeight   64
 
-@interface WJShopController ()
+@interface WJShopController ()<UIScrollViewDelegate>
 
 //headerView头部视图
 @property(nonatomic,weak)UIView *headerView;
 
 //tagView标签视图
 @property(nonatomic,weak)UIView *tagView;
+
+//小黄条
+@property(nonatomic,weak)UIView *yellowView;
+
+//滚动视图
+@property(nonatomic,weak)UIScrollView *scrollView;
 
 @end
 
@@ -79,6 +85,7 @@
     
     [tagView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
     
+    
     // TODO:添加小黄条
     UIView *yellowView = [[UIView alloc] init];
     yellowView.backgroundColor = [UIColor primaryYellowColor];
@@ -90,7 +97,41 @@
         make.bottom.offset(0);
         make.centerX.equalTo(order.mas_centerX).offset(0);
     }];
+    _yellowView = yellowView;
     
+}
+
+#pragma mark - 滚动停止调用(滚动视图联动小黄条)
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    //滚动的页数
+    CGFloat page = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    
+    //小黄条一次走过的距离
+    CGFloat distance = scrollView.bounds.size.width / (_tagView.subviews.count - 1);
+    
+    //滚动视图联动小黄条
+    _yellowView.transform = CGAffineTransformMakeTranslation(distance * page, 0);
+    
+}
+
+#pragma mark - 手动拖拽完全停下来后调用(标签粗体)
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    NSInteger currentPage = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    
+    for (NSInteger i = 0; i < _tagView.subviews.count; i++) {
+        
+        UIButton *btn = _tagView.subviews[i];
+        
+        if ([btn isKindOfClass:[UIButton class]]) {
+            if (currentPage == i) {
+                btn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+            }else{
+                btn.titleLabel.font = [UIFont systemFontOfSize:14];
+            }
+        }
+    }
 }
 
 #pragma mark - 创建标签中按钮
@@ -101,11 +142,40 @@
     [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:14];
     
+    // TODO:监听按钮点击事件
+    
+    [btn addTarget:self action:@selector(selectionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //按钮tag
+    btn.tag = _tagView.subviews.count;
+    
     //添加到标签栏中
     [_tagView addSubview:btn];
     
     return btn;
 }
+
+#pragma mark - 标签按钮点击事件
+
+- (void)selectionBtnClick:(UIButton *)btn{
+
+    CGFloat contentOffsetX = _scrollView.bounds.size.width * btn.tag;
+    
+    //非动画方式滚动
+//    _scrollView.contentOffset = CGPointMake(contentOffsetX, 0);
+//    
+//    [self scrollViewDidEndDecelerating:_scrollView];
+    
+    //动画方式滚动
+    [_scrollView setContentOffset:CGPointMake(contentOffsetX, 0)animated:YES];
+}
+
+#pragma mark - 滚动完成后调用此方法
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    [self scrollViewDidEndDecelerating:scrollView];
+
+}
+
 
 #pragma mark - 创建滚动视图
 - (void)settingShopScrollView{
@@ -113,6 +183,9 @@
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:scrollView];
+    
+    //代理
+    scrollView.delegate = self;
     
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
@@ -123,6 +196,8 @@
         make.left.right.bottom.offset(0);
         make.top.equalTo(_tagView.mas_bottom).offset(0);
     }];
+    
+    _scrollView = scrollView;
     
     WJShopCommentController *commentVc = [[WJShopCommentController alloc]init];
     WJShopInfoController *infoVc = [[WJShopInfoController alloc] init];
