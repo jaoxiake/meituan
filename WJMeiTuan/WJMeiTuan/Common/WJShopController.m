@@ -9,16 +9,20 @@
 #import "WJShopController.h"
 #import "WJFoodDetailController.h"
 #import "WJNavigationBar.h"
+#import "WJShopCommentController.h"
+#import "WJShopInfoController.h"
+#import "WJShopOrderController.h"
 
 // 头部视图的最大和最小高度
 #define KShopHeaderViewMaxHeight   180
 #define KShopHeaderViewMinHeight   64
 
 @interface WJShopController ()
-//headerView
+
+//headerView头部视图
 @property(nonatomic,weak)UIView *headerView;
 
-//tagView
+//tagView标签视图
 @property(nonatomic,weak)UIView *tagView;
 
 @end
@@ -110,10 +114,40 @@
     scrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:scrollView];
     
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.bounces = NO;
+    scrollView.pagingEnabled = YES;
+    
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.offset(0);
         make.top.equalTo(_tagView.mas_bottom).offset(0);
     }];
+    
+    WJShopCommentController *commentVc = [[WJShopCommentController alloc]init];
+    WJShopInfoController *infoVc = [[WJShopInfoController alloc] init];
+    WJShopOrderController *orderVc = [[WJShopOrderController alloc] init];
+    NSArray *vcs = @[commentVc,infoVc,orderVc];
+    
+    for (UIViewController *vc in vcs) {
+        //把控制器的视图添加到scrollView上
+        [scrollView addSubview:vc.view];
+        
+        //添加子控件
+        [self addChildViewController:vc];
+    
+        //告诉父控件已添加
+        [vc didMoveToParentViewController:self];
+        
+    }
+    
+    [scrollView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.offset(0);
+        make.width.height.equalTo(scrollView).offset(0);
+    }];
+    
+    [scrollView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
+    
 }
 
 

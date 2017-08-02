@@ -25,7 +25,7 @@
     
     //只给导航根控制器以外的控制器添加左边返回按钮
     if (self.childViewControllers.count > 1) {
-        
+    
         
         //导航条左边按钮
         viewController.item.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_backItem"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];

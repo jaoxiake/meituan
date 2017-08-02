@@ -20,6 +20,9 @@
 		9B5C984F1F2E4792009CE4CF /* WJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C984E1F2E4792009CE4CF /* WJNavigationController.m */; };
 		9B6C215A1F2F59D800B36B38 /* NSObject+LinearFormula.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21591F2F59D800B36B38 /* NSObject+LinearFormula.m */; };
 		9B6C215E1F319E0A00B36B38 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C215D1F319E0A00B36B38 /* UIColor+Addition.m */; };
+		9B6C21641F31A0AD00B36B38 /* WJShopCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21631F31A0AD00B36B38 /* WJShopCommentController.m */; };
+		9B6C21671F31A0BC00B36B38 /* WJShopInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21661F31A0BC00B36B38 /* WJShopInfoController.m */; };
+		9B6C216A1F31A0CF00B36B38 /* WJShopOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C21691F31A0CF00B36B38 /* WJShopOrderController.m */; };
 		9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5E81F2EB81500D759BE /* WJBaseViewController.m */; };
 		9BA2F5EC1F2EF9F400D759BE /* WJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5EB1F2EF9F400D759BE /* WJNavigationBar.m */; };
 		9BAC446D1F2E387100CF9E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC446C1F2E387100CF9E09 /* main.m */; };
@@ -88,6 +91,12 @@
 		9B6C215B1F2F59EC00B36B38 /* Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Addition.h; sourceTree = "<group>"; };
 		9B6C215C1F319E0A00B36B38 /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
 		9B6C215D1F319E0A00B36B38 /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		9B6C21621F31A0AD00B36B38 /* WJShopCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJShopCommentController.h; sourceTree = "<group>"; };
+		9B6C21631F31A0AD00B36B38 /* WJShopCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopCommentController.m; sourceTree = "<group>"; };
+		9B6C21651F31A0BC00B36B38 /* WJShopInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJShopInfoController.h; sourceTree = "<group>"; };
+		9B6C21661F31A0BC00B36B38 /* WJShopInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopInfoController.m; sourceTree = "<group>"; };
+		9B6C21681F31A0CF00B36B38 /* WJShopOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJShopOrderController.h; sourceTree = "<group>"; };
+		9B6C21691F31A0CF00B36B38 /* WJShopOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopOrderController.m; sourceTree = "<group>"; };
 		9BA2F5E71F2EB81500D759BE /* WJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJBaseViewController.h; sourceTree = "<group>"; };
 		9BA2F5E81F2EB81500D759BE /* WJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJBaseViewController.m; sourceTree = "<group>"; };
 		9BA2F5EA1F2EF9F400D759BE /* WJNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNavigationBar.h; sourceTree = "<group>"; };
@@ -214,6 +223,36 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		9B6C215F1F31A03E00B36B38 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C21621F31A0AD00B36B38 /* WJShopCommentController.h */,
+				9B6C21631F31A0AD00B36B38 /* WJShopCommentController.m */,
+			);
+			name = Comment;
+			path = ../Common/Comment;
+			sourceTree = "<group>";
+		};
+		9B6C21601F31A03E00B36B38 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C21651F31A0BC00B36B38 /* WJShopInfoController.h */,
+				9B6C21661F31A0BC00B36B38 /* WJShopInfoController.m */,
+			);
+			name = Info;
+			path = ../Common/Info;
+			sourceTree = "<group>";
+		};
+		9B6C21611F31A03E00B36B38 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C21681F31A0CF00B36B38 /* WJShopOrderController.h */,
+				9B6C21691F31A0CF00B36B38 /* WJShopOrderController.m */,
+			);
+			name = Order;
+			path = ../Common/Order;
+			sourceTree = "<group>";
+		};
 		9BAC445F1F2E387100CF9E09 = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +297,9 @@
 			children = (
 				9B5C984C1F2E4753009CE4CF /* Main */,
 				9BAC44D81F2E3A8800CF9E09 /* Shop */,
+				9B6C215F1F31A03E00B36B38 /* Comment */,
+				9B6C21601F31A03E00B36B38 /* Info */,
+				9B6C21611F31A03E00B36B38 /* Order */,
 				9BAC44D71F2E3A5F00CF9E09 /* FoodDetail */,
 			);
 			path = Classes;
@@ -457,6 +499,7 @@
 				9B5C984F1F2E4792009CE4CF /* WJNavigationController.m in Sources */,
 				9B5C984A1F2E4308009CE4CF /* View+MASAdditions.m in Sources */,
 				9BAC44C51F2E39D700CF9E09 /* NSData+ImageContentType.m in Sources */,
+				9B6C21641F31A0AD00B36B38 /* WJShopCommentController.m in Sources */,
 				9BAC44DE1F2E3AEF00CF9E09 /* WJShopController.m in Sources */,
 				9BAC44BE1F2E39D700CF9E09 /* AFHTTPSessionManager.m in Sources */,
 				9BAC44C31F2E39D700CF9E09 /* AFURLSessionManager.m in Sources */,
@@ -481,6 +524,7 @@
 				9B5C98461F2E4308009CE4CF /* MASViewAttribute.m in Sources */,
 				9B5C98431F2E4308009CE4CF /* MASConstraint.m in Sources */,
 				9BAC44D51F2E39D700CF9E09 /* UIView+WebCache.m in Sources */,
+				9B6C21671F31A0BC00B36B38 /* WJShopInfoController.m in Sources */,
 				9BAC44C11F2E39D700CF9E09 /* AFURLRequestSerialization.m in Sources */,
 				9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */,
 				9B5C98471F2E4308009CE4CF /* MASViewConstraint.m in Sources */,
@@ -494,6 +538,7 @@
 				9BA2F5EC1F2EF9F400D759BE /* WJNavigationBar.m in Sources */,
 				9B5C98481F2E4308009CE4CF /* NSArray+MASAdditions.m in Sources */,
 				9BAC44C41F2E39D700CF9E09 /* MKAnnotationView+WebCache.m in Sources */,
+				9B6C216A1F31A0CF00B36B38 /* WJShopOrderController.m in Sources */,
 				9B5C98491F2E4308009CE4CF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				9B6C215E1F319E0A00B36B38 /* UIColor+Addition.m in Sources */,
 				9BAC44C81F2E39D700CF9E09 /* SDImageCacheConfig.m in Sources */,
