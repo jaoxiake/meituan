@@ -12,9 +12,12 @@
 
 @interface WJInfoLoopView ()
 
-//第一个
-@property (nonatomic,weak)UIView *infoView1;
-@property (nonatomic,weak)UIView *infoView2;
+//第一个view
+@property (nonatomic,weak)WJInfoView *infoView1;
+//第二个view
+@property (nonatomic,weak)WJInfoView *infoView2;
+//显示第几条信息
+@property (nonatomic,assign)NSInteger currentIndex;
 
 @end
 
@@ -61,9 +64,48 @@
 -(void)setDiscounts:(NSArray<WJInfoModel *> *)discounts{
     _discounts = discounts;
     
+    //设置数据
+    [self settingData];
     
+    //滚动
+    [self scroll];
 }
 
+//设置数据
+- (void)settingData{
+    
+    if (_currentIndex + 1 == _discounts.count) {
+        _infoView1.infoModel = _discounts[_currentIndex];
+        _infoView2.infoModel = _discounts[0];
+        _currentIndex = -1;
+    }else{
+    _infoView1.infoModel = _discounts[_currentIndex];
+    _infoView2.infoModel = _discounts[(_currentIndex + 1) % 7];
+    }
+}
+
+//滚动
+- (void)scroll{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            _infoView1.transform = CGAffineTransformMakeTranslation(0, - self.bounds.size.height);
+            _infoView2.transform = CGAffineTransformMakeTranslation(0, - self.bounds.size.height);
+            
+        } completion:^(BOOL finished) {
+            _currentIndex++;
+            
+            [self settingData];
+            
+            _infoView1.transform = CGAffineTransformIdentity;
+            _infoView2.transform = CGAffineTransformIdentity;
+            
+            [self scroll];
+        }];
+    });
+}
 
 
 @end

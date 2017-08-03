@@ -8,7 +8,7 @@
 
 #import "WJShopHeaderView.h"
 #import "WJShopModel.h"
-#import "WJInfoView.h"
+#import "WJInfoLoopView.h"
 
 @interface WJShopHeaderView ()
 
@@ -25,7 +25,7 @@
 @property (nonatomic, weak) UILabel *bulletinLabel;
 
 //轮播视图
-@property (nonatomic, weak) WJInfoView *loopView;
+@property (nonatomic, weak) WJInfoLoopView *loopView;
 
 @end
 
@@ -60,8 +60,8 @@
     }];
     
     //轮播图
-    WJInfoView *loopView = [[WJInfoView alloc] init];
-    loopView.backgroundColor = [UIColor redColor];
+    WJInfoLoopView *loopView = [[WJInfoLoopView alloc] init];
+    loopView.clipsToBounds = YES;
     [self addSubview:loopView];
     
     [loopView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,6 +69,15 @@
         make.right.offset(-16);
         make.bottom.offset(-8);
         make.height.offset(20);
+    }];
+    
+    //添加轮播视图右边的小箭头
+    UIImageView *arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_arrow_white"]];
+    [loopView addSubview:arrowView];
+    
+    [arrowView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(0);
+        make.centerY.offset(0);
     }];
     
     //分割线
@@ -152,7 +161,7 @@
 
    
     //优惠信息
-    _loopView.infoModel = shopPOI_infoModel.discounts[0];
+    _loopView.discounts = shopPOI_infoModel.discounts;
 }
 
 @end
