@@ -69,7 +69,7 @@
     
     //分割线
     UIView *dashLineView = [[UIView alloc] init];
-    dashLineView.backgroundColor = [UIColor whiteColor];
+    dashLineView.backgroundColor = [UIColor colorWithPatternImage:[UIImage dashLineWithColor:[UIColor whiteColor]]];
     [self addSubview:dashLineView];
     
     [dashLineView mas_makeConstraints:^(MASConstraintMaker *make) {

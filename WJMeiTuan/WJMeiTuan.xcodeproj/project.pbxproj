@@ -60,6 +60,10 @@
 		9BAC44D61F2E39D700CF9E09 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC44BD1F2E39D700CF9E09 /* UIView+WebCacheOperation.m */; };
 		9BAC44DB1F2E3ADF00CF9E09 /* WJFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC44DA1F2E3ADF00CF9E09 /* WJFoodDetailController.m */; };
 		9BAC44DE1F2E3AEF00CF9E09 /* WJShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC44DD1F2E3AEF00CF9E09 /* WJShopController.m */; };
+		9BD86B521F32BB4500CD3663 /* UIImage+DashLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B511F32BB4500CD3663 /* UIImage+DashLine.m */; };
+		9BD86B561F32E48200CD3663 /* WJInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B551F32E48200CD3663 /* WJInfoView.m */; };
+		9BD86B591F32E4A100CD3663 /* WJInfoLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B581F32E4A100CD3663 /* WJInfoLoopView.m */; };
+		9BD86B5C1F32E4DD00CD3663 /* WJInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B5B1F32E4DD00CD3663 /* WJInfoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +180,14 @@
 		9BAC44DC1F2E3AEF00CF9E09 /* WJShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJShopController.h; sourceTree = "<group>"; };
 		9BAC44DD1F2E3AEF00CF9E09 /* WJShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopController.m; sourceTree = "<group>"; };
 		9BAC44E21F2E3BE300CF9E09 /* WJWaiMai-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WJWaiMai-PrefixHeader.pch"; sourceTree = "<group>"; };
+		9BD86B501F32BB4500CD3663 /* UIImage+DashLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DashLine.h"; sourceTree = "<group>"; };
+		9BD86B511F32BB4500CD3663 /* UIImage+DashLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DashLine.m"; sourceTree = "<group>"; };
+		9BD86B541F32E48200CD3663 /* WJInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJInfoView.h; path = WJMeiTuan/Classes/WJInfoView.h; sourceTree = SOURCE_ROOT; };
+		9BD86B551F32E48200CD3663 /* WJInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJInfoView.m; path = WJMeiTuan/Classes/WJInfoView.m; sourceTree = SOURCE_ROOT; };
+		9BD86B571F32E4A100CD3663 /* WJInfoLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJInfoLoopView.h; sourceTree = "<group>"; };
+		9BD86B581F32E4A100CD3663 /* WJInfoLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJInfoLoopView.m; sourceTree = "<group>"; };
+		9BD86B5A1F32E4DD00CD3663 /* WJInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJInfoModel.h; path = WJMeiTuan/Classes/WJInfoModel.h; sourceTree = SOURCE_ROOT; };
+		9BD86B5B1F32E4DD00CD3663 /* WJInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJInfoModel.m; path = WJMeiTuan/Classes/WJInfoModel.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +365,8 @@
 				9B6C215B1F2F59EC00B36B38 /* Addition.h */,
 				9B6C215C1F319E0A00B36B38 /* UIColor+Addition.h */,
 				9B6C215D1F319E0A00B36B38 /* UIColor+Addition.m */,
+				9BD86B501F32BB4500CD3663 /* UIImage+DashLine.h */,
+				9BD86B511F32BB4500CD3663 /* UIImage+DashLine.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -459,12 +473,26 @@
 		9BAC44D81F2E3A8800CF9E09 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				9BD86B531F32E44F00CD3663 /* LoopView */,
 				9B6C217F1F322BDF00B36B38 /* View */,
 				9B6C217E1F322BD600B36B38 /* Controller */,
 				9B6C217D1F322BC700B36B38 /* Model */,
 			);
 			name = Shop;
 			path = ../Common;
+			sourceTree = "<group>";
+		};
+		9BD86B531F32E44F00CD3663 /* LoopView */ = {
+			isa = PBXGroup;
+			children = (
+				9BD86B541F32E48200CD3663 /* WJInfoView.h */,
+				9BD86B551F32E48200CD3663 /* WJInfoView.m */,
+				9BD86B571F32E4A100CD3663 /* WJInfoLoopView.h */,
+				9BD86B581F32E4A100CD3663 /* WJInfoLoopView.m */,
+				9BD86B5A1F32E4DD00CD3663 /* WJInfoModel.h */,
+				9BD86B5B1F32E4DD00CD3663 /* WJInfoModel.m */,
+			);
+			name = LoopView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,10 +590,12 @@
 				9BAC44D21F2E39D700CF9E09 /* UIImage+WebP.m in Sources */,
 				9BAC44CC1F2E39D700CF9E09 /* SDWebImageDownloaderOperation.m in Sources */,
 				9BAC44CB1F2E39D700CF9E09 /* SDWebImageDownloader.m in Sources */,
+				9BD86B591F32E4A100CD3663 /* WJInfoLoopView.m in Sources */,
 				9BAC44D01F2E39D700CF9E09 /* UIImage+GIF.m in Sources */,
 				9BAC44D61F2E39D700CF9E09 /* UIView+WebCacheOperation.m in Sources */,
 				9B5C98461F2E4308009CE4CF /* MASViewAttribute.m in Sources */,
 				9B5C98431F2E4308009CE4CF /* MASConstraint.m in Sources */,
+				9BD86B561F32E48200CD3663 /* WJInfoView.m in Sources */,
 				9BAC44D51F2E39D700CF9E09 /* UIView+WebCache.m in Sources */,
 				9B6C21881F3239FA00B36B38 /* UILabel+Addition.m in Sources */,
 				9B6C21671F31A0BC00B36B38 /* WJShopInfoController.m in Sources */,
@@ -585,7 +615,9 @@
 				9B5C98481F2E4308009CE4CF /* NSArray+MASAdditions.m in Sources */,
 				9BAC44C41F2E39D700CF9E09 /* MKAnnotationView+WebCache.m in Sources */,
 				9B6C216A1F31A0CF00B36B38 /* WJShopOrderController.m in Sources */,
+				9BD86B5C1F32E4DD00CD3663 /* WJInfoModel.m in Sources */,
 				9B5C98491F2E4308009CE4CF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				9BD86B521F32BB4500CD3663 /* UIImage+DashLine.m in Sources */,
 				9B6C215E1F319E0A00B36B38 /* UIColor+Addition.m in Sources */,
 				9BAC44C81F2E39D700CF9E09 /* SDImageCacheConfig.m in Sources */,
 				9BAC44DB1F2E3ADF00CF9E09 /* WJFoodDetailController.m in Sources */,
