@@ -31,7 +31,6 @@
 		9BA2F5EC1F2EF9F400D759BE /* WJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2F5EB1F2EF9F400D759BE /* WJNavigationBar.m */; };
 		9BAC446D1F2E387100CF9E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC446C1F2E387100CF9E09 /* main.m */; };
 		9BAC44701F2E387100CF9E09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC446F1F2E387100CF9E09 /* AppDelegate.m */; };
-		9BAC44781F2E387100CF9E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC44771F2E387100CF9E09 /* Assets.xcassets */; };
 		9BAC447B1F2E387100CF9E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC44791F2E387100CF9E09 /* LaunchScreen.storyboard */; };
 		9BAC44BE1F2E39D700CF9E09 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC448A1F2E39D700CF9E09 /* AFHTTPSessionManager.m */; };
 		9BAC44BF1F2E39D700CF9E09 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC448D1F2E39D700CF9E09 /* AFNetworkReachabilityManager.m */; };
@@ -64,6 +63,7 @@
 		9BD86B561F32E48200CD3663 /* WJInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B551F32E48200CD3663 /* WJInfoView.m */; };
 		9BD86B591F32E4A100CD3663 /* WJInfoLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B581F32E4A100CD3663 /* WJInfoLoopView.m */; };
 		9BD86B5C1F32E4DD00CD3663 /* WJInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD86B5B1F32E4DD00CD3663 /* WJInfoModel.m */; };
+		9BED695C1F33521D00A5DCE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BED695B1F33521D00A5DCE0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,7 +120,6 @@
 		9BAC446C1F2E387100CF9E09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BAC446E1F2E387100CF9E09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 		9BAC446F1F2E387100CF9E09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		9BAC44771F2E387100CF9E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		9BAC447A1F2E387100CF9E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BAC447C1F2E387100CF9E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAC44891F2E39D700CF9E09 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -188,6 +187,7 @@
 		9BD86B581F32E4A100CD3663 /* WJInfoLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJInfoLoopView.m; sourceTree = "<group>"; };
 		9BD86B5A1F32E4DD00CD3663 /* WJInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJInfoModel.h; path = WJMeiTuan/Classes/WJInfoModel.h; sourceTree = SOURCE_ROOT; };
 		9BD86B5B1F32E4DD00CD3663 /* WJInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJInfoModel.m; path = WJMeiTuan/Classes/WJInfoModel.m; sourceTree = SOURCE_ROOT; };
+		9BED695B1F33521D00A5DCE0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +328,7 @@
 				9BAC44851F2E389100CF9E09 /* Other */,
 				9BAC446B1F2E387100CF9E09 /* Supporting Files */,
 				9BAC44E21F2E3BE300CF9E09 /* WJWaiMai-PrefixHeader.pch */,
+				9BED695B1F33521D00A5DCE0 /* Images.xcassets */,
 			);
 			path = WJMeiTuan;
 			sourceTree = "<group>";
@@ -387,7 +388,6 @@
 				9B6C217B1F322B9600B36B38 /* food.json */,
 				9BAC446E1F2E387100CF9E09 /* AppDelegate.h */,
 				9BAC446F1F2E387100CF9E09 /* AppDelegate.m */,
-				9BAC44771F2E387100CF9E09 /* Assets.xcassets */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -554,9 +554,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BED695C1F33521D00A5DCE0 /* Images.xcassets in Resources */,
 				9B6C217C1F322B9600B36B38 /* food.json in Resources */,
 				9BAC447B1F2E387100CF9E09 /* LaunchScreen.storyboard in Resources */,
-				9BAC44781F2E387100CF9E09 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WJMeiTuan/WJWaiMai-PrefixHeader.pch";
 				INFOPLIST_FILE = WJMeiTuan/Info.plist;
@@ -745,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WJMeiTuan/WJWaiMai-PrefixHeader.pch";
 				INFOPLIST_FILE = WJMeiTuan/Info.plist;
