@@ -43,12 +43,13 @@
 
 - (void)viewDidLoad {
     
+   
     // TODO:加载数据
     [self loadFoodData];
     
     // TODO:创建头部视图
     [self settingHeaderView];
-
+    
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor blueColor];
@@ -269,7 +270,7 @@
     [self.view addGestureRecognizer:pan];
     
     _headerView = headerView;
-    headerView.poi_infoModel = _poi_infoModel;
+    headerView.shopPOI_infoModel = _poi_infoModel;
     
 }
 

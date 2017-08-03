@@ -11,5 +11,5 @@
 
 @interface WJShopHeaderView : UIView
 //接收poi_info模型数据
-@property(nonatomic,strong)WJShopModel *poi_infoModel;
+@property(nonatomic,strong)WJShopModel *shopPOI_infoModel;
 @end

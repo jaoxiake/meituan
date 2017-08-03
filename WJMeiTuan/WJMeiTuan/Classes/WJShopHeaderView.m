@@ -10,11 +10,19 @@
 #import "WJShopModel.h"
 
 @interface WJShopHeaderView ()
+
 //头部背景图片
 @property(nonatomic,weak)UIImageView *bjView;
 
 //头像
 @property(nonatomic,weak)UIImageView *touXiang;
+
+//店名
+@property (nonatomic, weak) UILabel *nameLabel;
+
+//商家公告
+@property (nonatomic, weak) UILabel *bulletinLabel;
+
 @end
 
 @implementation WJShopHeaderView
@@ -114,18 +122,31 @@
     
     _bjView = bjView;
     _touXiang = touXiang;
+    _nameLabel = nameLabel;
+    _bulletinLabel = bulletinLabel;
+
     
 }
 
--(void)setPoi_infoModel:(WJShopModel *)poi_infoModel{
+-(void)setShopPOI_infoModel:(WJShopModel *)shopPOI_infoModel{
 
-    _poi_infoModel = poi_infoModel;
+    _shopPOI_infoModel = shopPOI_infoModel;
     
-    NSString *bjViewURL = [poi_infoModel.poi_back_pic_url stringByDeletingPathExtension];
+    //头部背景图片
+    NSString *bjViewURL = [shopPOI_infoModel.poi_back_pic_url stringByDeletingPathExtension];
     [_bjView sd_setImageWithURL:[NSURL URLWithString:bjViewURL]];
     
-    NSString *touxiangURL = [poi_infoModel.pic_url stringByDeletingPathExtension];
+    //头像
+    NSString *touxiangURL = [shopPOI_infoModel.pic_url stringByDeletingPathExtension];
     [_touXiang sd_setImageWithURL:[NSURL URLWithString:touxiangURL]];
+    
+    //店名
+    _nameLabel.text = shopPOI_infoModel.name;
+    
+    //商家公告
+    _bulletinLabel.text = shopPOI_infoModel.bulletin;
+
 
 }
+
 @end

@@ -16,5 +16,13 @@
 //头像
 @property(nonatomic,copy)NSString *pic_url;
 
+//店名
+@property (nonatomic, copy) NSString *name;
+
+//商家公告
+@property (nonatomic, copy) NSString *bulletin;
+
+
+
 + (instancetype)shopPOI_infoWithDict:(NSDictionary *)dict;
 @end
