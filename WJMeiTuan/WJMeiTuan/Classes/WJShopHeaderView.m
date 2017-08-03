@@ -8,6 +8,7 @@
 
 #import "WJShopHeaderView.h"
 #import "WJShopModel.h"
+#import "WJInfoView.h"
 
 @interface WJShopHeaderView ()
 
@@ -22,6 +23,9 @@
 
 //商家公告
 @property (nonatomic, weak) UILabel *bulletinLabel;
+
+//轮播视图
+@property (nonatomic, weak) WJInfoView *loopView;
 
 @end
 
@@ -56,7 +60,7 @@
     }];
     
     //轮播图
-    UIView *loopView = [[UIView alloc] init];
+    WJInfoView *loopView = [[WJInfoView alloc] init];
     loopView.backgroundColor = [UIColor redColor];
     [self addSubview:loopView];
     
@@ -124,7 +128,7 @@
     _touXiang = touXiang;
     _nameLabel = nameLabel;
     _bulletinLabel = bulletinLabel;
-
+    _loopView = loopView;
     
 }
 
@@ -146,7 +150,9 @@
     //商家公告
     _bulletinLabel.text = shopPOI_infoModel.bulletin;
 
-
+   
+    //优惠信息
+    _loopView.infoModel = shopPOI_infoModel.discounts[0];
 }
 
 @end

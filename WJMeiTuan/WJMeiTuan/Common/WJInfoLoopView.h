@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WJInfoModel;
 
 @interface WJInfoLoopView : UIView
+
+//接收模型数据
+@property (nonatomic,strong)NSArray<WJInfoModel *> *discounts;
 
 @end

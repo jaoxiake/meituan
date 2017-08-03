@@ -22,7 +22,8 @@
 //商家公告
 @property (nonatomic, copy) NSString *bulletin;
 
-
+//优惠信息
+@property (nonatomic, copy) NSArray *discounts;
 
 + (instancetype)shopPOI_infoWithDict:(NSDictionary *)dict;
 @end

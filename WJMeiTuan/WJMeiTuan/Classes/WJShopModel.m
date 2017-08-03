@@ -7,6 +7,7 @@
 //
 
 #import "WJShopModel.h"
+#import "WJInfoModel.h"
 
 @implementation WJShopModel
 
@@ -19,6 +20,16 @@
 }
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    
+    if ([key isEqualToString:@"discounts2"]) {
+        NSArray *discounts2Arr = value;
+        NSMutableArray *arrM = [NSMutableArray arrayWithCapacity:discounts2Arr.count];
+        for (NSDictionary *dict in discounts2Arr) {
+            WJInfoModel *infoModel = [WJInfoModel infoWithDict:dict];
+            [arrM addObject:infoModel];
+        }
+        _discounts = arrM.copy;
+    }
     
 }
 @end

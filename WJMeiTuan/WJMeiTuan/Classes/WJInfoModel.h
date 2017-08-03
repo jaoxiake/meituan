@@ -10,4 +10,11 @@
 
 @interface WJInfoModel : NSObject
 
+//图片
+@property (nonatomic,copy) NSString *icon_url ;
+
+//信息
+@property (nonatomic,copy) NSString *info;
+
++(instancetype)infoWithDict:(NSDictionary *)dict;
 @end
