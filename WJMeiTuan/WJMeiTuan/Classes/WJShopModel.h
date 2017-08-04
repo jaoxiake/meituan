@@ -25,5 +25,15 @@
 //优惠信息
 @property (nonatomic, copy) NSArray *discounts;
 
+/// 起送价
+@property (nonatomic, copy) NSString *min_price_tip;
+
+/// 配送费
+@property (nonatomic, copy) NSString *shipping_fee_tip;
+
+/// 配送时间
+@property (nonatomic, copy) NSString *delivery_time_tip;
+
+
 + (instancetype)shopPOI_infoWithDict:(NSDictionary *)dict;
 @end

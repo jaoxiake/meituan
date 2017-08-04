@@ -9,6 +9,7 @@
 #import "WJShopHeaderView.h"
 #import "WJShopModel.h"
 #import "WJInfoLoopView.h"
+#import "WJShopDetailController.h"
 
 @interface WJShopHeaderView ()
 
@@ -70,6 +71,7 @@
         make.bottom.offset(-8);
         make.height.offset(20);
     }];
+    
     
     //添加轮播视图右边的小箭头
     UIImageView *arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_arrow_white"]];
@@ -138,6 +140,26 @@
     _nameLabel = nameLabel;
     _bulletinLabel = bulletinLabel;
     _loopView = loopView;
+    
+    // TODO:轮播视图敲击事件
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loopViewClick)];
+    [loopView addGestureRecognizer:tap];
+    
+}
+
+#pragma mark - 轮播视图敲击事件
+- (void)loopViewClick{
+    
+    //创建商家详情页
+    WJShopDetailController *shopDetailVc = [[WJShopDetailController alloc] init];
+    
+    //传递数据
+    shopDetailVc.shopPOI_infoModel = _shopPOI_infoModel;
+    
+    // TODO:modal跳转
+    [self.viewController presentViewController:shopDetailVc animated:YES completion:^{
+        nil;
+    }];
     
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B350A741F344F4A00730747 /* WJShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B350A731F344F4A00730747 /* WJShopDetailController.m */; };
+		9B350A771F3450A700730747 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B350A761F3450A700730747 /* UIView+Addition.m */; };
 		9B5C98421F2E4308009CE4CF /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C982A1F2E4308009CE4CF /* MASCompositeConstraint.m */; };
 		9B5C98431F2E4308009CE4CF /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C982D1F2E4308009CE4CF /* MASConstraint.m */; };
 		9B5C98441F2E4308009CE4CF /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C982F1F2E4308009CE4CF /* MASConstraintMaker.m */; };
@@ -67,6 +69,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B350A721F344F4A00730747 /* WJShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJShopDetailController.h; sourceTree = "<group>"; };
+		9B350A731F344F4A00730747 /* WJShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJShopDetailController.m; sourceTree = "<group>"; };
+		9B350A751F3450A700730747 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		9B350A761F3450A700730747 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		9B5C98291F2E4308009CE4CF /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		9B5C982A1F2E4308009CE4CF /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		9B5C982B1F2E4308009CE4CF /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -299,6 +305,8 @@
 			children = (
 				9B6C21831F322E8500B36B38 /* WJShopHeaderView.h */,
 				9B6C21841F322E8500B36B38 /* WJShopHeaderView.m */,
+				9B350A721F344F4A00730747 /* WJShopDetailController.h */,
+				9B350A731F344F4A00730747 /* WJShopDetailController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -368,6 +376,8 @@
 				9B6C215D1F319E0A00B36B38 /* UIColor+Addition.m */,
 				9BD86B501F32BB4500CD3663 /* UIImage+DashLine.h */,
 				9BD86B511F32BB4500CD3663 /* UIImage+DashLine.m */,
+				9B350A751F3450A700730747 /* UIView+Addition.h */,
+				9B350A761F3450A700730747 /* UIView+Addition.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -590,6 +600,7 @@
 				9BAC44D21F2E39D700CF9E09 /* UIImage+WebP.m in Sources */,
 				9BAC44CC1F2E39D700CF9E09 /* SDWebImageDownloaderOperation.m in Sources */,
 				9BAC44CB1F2E39D700CF9E09 /* SDWebImageDownloader.m in Sources */,
+				9B350A741F344F4A00730747 /* WJShopDetailController.m in Sources */,
 				9BD86B591F32E4A100CD3663 /* WJInfoLoopView.m in Sources */,
 				9BAC44D01F2E39D700CF9E09 /* UIImage+GIF.m in Sources */,
 				9BAC44D61F2E39D700CF9E09 /* UIView+WebCacheOperation.m in Sources */,
@@ -602,6 +613,7 @@
 				9BAC44C11F2E39D700CF9E09 /* AFURLRequestSerialization.m in Sources */,
 				9BA2F5E91F2EB81500D759BE /* WJBaseViewController.m in Sources */,
 				9B5C98471F2E4308009CE4CF /* MASViewConstraint.m in Sources */,
+				9B350A771F3450A700730747 /* UIView+Addition.m in Sources */,
 				9B6C215A1F2F59D800B36B38 /* NSObject+LinearFormula.m in Sources */,
 				9BAC44C71F2E39D700CF9E09 /* SDImageCache.m in Sources */,
 				9BAC44BF1F2E39D700CF9E09 /* AFNetworkReachabilityManager.m in Sources */,
