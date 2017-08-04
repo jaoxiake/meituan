@@ -10,6 +10,7 @@
 #import "WJShopModel.h"
 #import "WJInfoLoopView.h"
 #import "WJShopDetailController.h"
+#import "WJDetailAnimator.h"
 
 @interface WJShopHeaderView ()
 
@@ -27,6 +28,9 @@
 
 //轮播视图
 @property (nonatomic, weak) WJInfoLoopView *loopView;
+
+//代理对象
+@property(nonatomic,strong) WJDetailAnimator *animator;
 
 @end
 
@@ -155,6 +159,15 @@
     
     //传递数据
     shopDetailVc.shopPOI_infoModel = _shopPOI_infoModel;
+    
+    //动画模式自定义
+    shopDetailVc.modalPresentationStyle = UIModalPresentationCustom;
+    
+    //创建转场代理对象
+    _animator = [[WJDetailAnimator alloc] init];
+    
+    //给要modal出的控制器设置转场代理
+    shopDetailVc.transitioningDelegate = _animator;
     
     // TODO:modal跳转
     [self.viewController presentViewController:shopDetailVc animated:YES completion:^{
