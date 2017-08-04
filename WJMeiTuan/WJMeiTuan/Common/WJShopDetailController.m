@@ -12,6 +12,18 @@
 
 #define KMargin 16
 
+@interface WJScrollView : UIScrollView
+
+@end
+
+@implementation WJScrollView
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.viewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+@end
+
 @interface WJShopDetailController ()
 
 @end
@@ -49,7 +61,7 @@
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //滚动视图
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    WJScrollView *scrollView = [[WJScrollView alloc] init];
     [self.view addSubview:scrollView];
     
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -198,6 +210,12 @@
 
     
 }
+
+#pragma mark - 触摸空白区域关闭
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - 关闭商家详情页面
 - (void)btnClick{
